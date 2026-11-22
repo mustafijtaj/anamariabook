@@ -141,7 +141,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:10px 24px;justify-content:space-bet
 <div class="draft">Draft website preview prepared for Ana Maria Tomoiaga</div>
 <nav><div class="wrap">
   <a class="name" href="#top">Ana Maria Tomoiaga</a>
-  <div class="links"><a href="#days">25 Days</a><a href="#book">The Book</a><a href="#inside">Look Inside</a><a href="#gift">Gifting</a><a href="#author">About</a></div>
+  <div class="links"><a href="#days">25 Days</a><a href="#digital">Digital</a><a href="#inside">Look Inside</a><a href="#gift">Gifting</a><a href="#author">About</a></div>
 </div></nav>
 
 <header class="band hero" id="top">
@@ -187,6 +187,24 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:10px 24px;justify-content:space-bet
   <p>From the Season of Light on December 1st to the Morning of Light on Christmas Day. Tap a door to see that day's theme.</p>
   <div class="row"><button class="btn ghost2" id="openAll" type="button">Open all doors</button></div>
   <div class="doors" id="doors"></div>
+</div></section>
+
+<section class="band digital" id="digital"><div class="wrap">
+  <div class="eyebrow">Coming soon · Digital edition</div>
+  <h2>Read it, or hear it in Ana's own voice</h2>
+  <p>The digital edition opens one day at a time, on any phone, tablet or computer. Each day you choose: read the page yourself, or press play and let Ana read it to you.</p>
+  <div class="reader" id="reader">
+    <img src="page-day1.jpg" alt="December 1 page from the digital edition" width="765" height="1013">
+    <div>
+      <div class="eyebrow" style="margin:0">December 1</div>
+      <h3 style="font-size:clamp(24px,3vw,32px)">The Season of Light</h3>
+      <div class="mode" role="group" aria-label="How to enjoy today's page"><button type="button" id="mListen" aria-pressed="true">Listen</button><button type="button" id="mRead" aria-pressed="false">Read</button></div>
+      <div class="player"><button class="play" type="button" id="play" aria-label="Play Ana's reading of December 1"><svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 3l12 7-12 7Z" fill="currentColor"/></svg></button><div class="wave" id="wave" aria-hidden="true"></div></div>
+      <div class="pnote" id="pnote" aria-live="polite">Read by Ana Maria Tomoiaga</div>
+      <div class="pick" id="pick" aria-label="Choose a day"></div>
+      <p class="note" style="margin-top:14px">Draft preview: Ana's recordings will be added for all 25 days.</p>
+    </div>
+  </div>
 </div></section>
 
 <section class="band inside center" id="inside"><div class="wrap">
@@ -279,6 +297,15 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:10px 24px;justify-content:space-bet
   doors.addEventListener('click',e=>{const d=e.target.closest('.door');if(d)set(d,!d.classList.contains('open'))});
   const all=document.getElementById('openAll');let open=false;
   all.addEventListener('click',()=>{open=!open;doors.querySelectorAll('.door').forEach(d=>set(d,open));all.textContent=open?'Close all doors':'Open all doors'});
+  const wave=document.getElementById('wave');
+  wave.innerHTML=Array.from({length:42},(_,i)=>`<i style="height:${20+Math.round(70*Math.abs(Math.sin(i*1.7)*Math.cos(i*.45)))}%"></i>`).join('');
+  const reader=document.getElementById('reader'),mL=document.getElementById('mListen'),mR=document.getElementById('mRead'),pn=document.getElementById('pnote');
+  const mode=r=>{reader.classList.toggle('readmode',r);mL.setAttribute('aria-pressed',!r);mR.setAttribute('aria-pressed',r)};
+  mL.addEventListener('click',()=>mode(false));mR.addEventListener('click',()=>mode(true));
+  document.getElementById('play').addEventListener('click',()=>{pn.textContent='In the finished edition, Ana’s own recording of this day plays here.'});
+  const pick=document.getElementById('pick');
+  pick.innerHTML=days.map((d,i)=>`<button type="button" class="${i?'lock':'on'}" aria-label="December ${i+1}${i?' (full edition)':''}">${i+1}</button>`).join('');
+  pick.addEventListener('click',e=>{const b=e.target.closest('button');if(b&&b.classList.contains('lock'))pn.textContent='Days 2 to 25 open in the full digital edition.'});
   document.getElementById('f').addEventListener('submit',e=>{
     e.preventDefault();
     document.getElementById('thanks').textContent='Thank you! On the live website, this will add you to Ana Maria’s mailing list.';
