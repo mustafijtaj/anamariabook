@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>25 Days of Christmas Magic | Ana Maria Tomoiaga</title>
+<meta name="description" content="25 Days of Christmas Magic by Ana Maria Tomoiaga: a Christmas devotional and luxury coffee table keepsake with 25 days of light, love and reflection, and pages for your own Christmas story.">
+<meta name="theme-color" content="#6e0a0d">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="canonical" href="https://anamariabook.netlify.app/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://anamariabook.netlify.app/">
+<meta property="og:title" content="25 Days of Christmas Magic by Ana Maria Tomoiaga">
+<meta property="og:description" content="A Christmas devotional and coffee table keepsake: 25 days of light, love and reflection, with pages for your own Christmas story.">
+<meta property="og:image" content="https://anamariabook.netlify.app/share.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Jost:wght@400;500&family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
+<style>
+/* VOICE: warm, elegant, devotional; a holiday keepsake in the hand
+   IDEA: the book's own red pages with gold ornamental frames, and an advent calendar of 25 doors
+   PICTURE: the real hardcover on a deep red field with gold stars; framed sample pages
+   COLOUR and TYPE: Christmas red dominant, evergreen support, gold accent; Playfair Display (the book's lettering) + Jost, a script for Ana's signature
+   LAYOUT: full-width bands: hero, letter, how it works, 25 days, look inside, gift, author, newsletter, footer */
+:root{color-scheme:light dark;
+--red:light-dark(#8c0f12,#3a0709);--red2:light-dark(#6e0a0d,#250405);
+--green:light-dark(#1d3a2a,#10241a);--gold:light-dark(#c9973f,#e0b65f);--gold-soft:light-dark(#f3e2bd,#3a2a10);
+--bg:light-dark(#fffaf3,#140707);--ink:light-dark(#2a1212,#f5e9dc);--muted:light-dark(#6b4d4a,#c9b3a6);--card:light-dark(#ffffff,#211010);--hi:light-dark(#8c0f12,#e0b65f)}
+:root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 Jost,system-ui,sans-serif;overflow-x:clip}
+h1,h2,h3{font-family:"Playfair Display",Georgia,serif;font-weight:700;line-height:1.08;text-wrap:balance;margin:0 0 .5em}
+h2{font-size:clamp(30px,4vw,44px)}h3{font-size:21px}
+p{margin:0 0 1em;max-width:62ch}
+a{color:inherit}
+img{max-width:100%;height:auto;display:block}
+.band{padding:clamp(52px,6vw,96px) max(5vw,16px)}
+.wrap{max-width:1180px;margin:0 auto}
+.center{text-align:center}.center p{margin-inline:auto}
+.draft{background:var(--gold);color:#2a1212;text-align:center;font-size:14px;padding:8px 16px}
+nav{position:sticky;top:0;z-index:5;background:var(--red2);color:#fbecd6;border-bottom:1px solid color-mix(in srgb,var(--gold) 40%,transparent)}
+nav .wrap{display:flex;flex-wrap:wrap;align-items:center;gap:4px 26px;padding:10px max(5vw,16px)}
+nav .name{font-family:"Playfair Display",serif;font-size:21px;font-weight:700;margin-right:auto;text-decoration:none;padding:8px 0}
+nav .links{display:flex;flex-wrap:wrap;gap:0 20px;font-size:15px}
+nav .links a{text-decoration:none;opacity:.88;padding:10px 0}nav .links a:hover{opacity:1;color:var(--gold)}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 26px;border-radius:999px;font:500 16px Jost,sans-serif;text-decoration:none;border:0;cursor:pointer;transition:transform .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn:focus-visible,input:focus-visible,.door:focus-visible,nav a:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.gold{background:var(--gold);color:#2a1212}.ghost{border:1.5px solid color-mix(in srgb,#fbecd6 60%,transparent);color:#fbecd6}
+.hero{background:radial-gradient(ellipse at 70% 40%,#b3191d 0%,var(--red) 45%,var(--red2) 100%);color:#fbecd6;position:relative;overflow:hidden}
+.hero svg.stars{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;opacity:.55}
+.hero .wrap{position:relative;display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:clamp(32px,5vw,72px);align-items:center}
+.hero h1{font-size:clamp(38px,5.4vw,60px);color:#fff4e0}
+.eyebrow{font-family:"Playfair Display",serif;font-style:italic;font-size:20px;color:var(--gold);margin-bottom:14px}
+.hero .lead{font-size:19px}
+.hero .meta{font-size:15px;opacity:.85;margin:22px 0 0}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.book{justify-self:center;width:min(420px,100%);perspective:1400px}
+.book img{border-radius:3px 8px 8px 3px;box-shadow:-14px 22px 50px rgba(0,0,0,.5);transform:rotateY(-9deg);transition:transform .6s;animation:float 6s ease-in-out infinite}
+.book:hover img{transform:rotateY(0)}
+@keyframes float{50%{translate:0 -10px}}
+@media(prefers-reduced-motion:reduce){.book img{animation:none;transition:none}html{scroll-behavior:auto}.door{transition:none}}
+.letter{background:var(--card)}
+.paper{max-width:760px;margin:0 auto;text-align:center;padding:clamp(28px,5vw,56px);border:2px solid var(--gold);outline:1px solid var(--gold);outline-offset:6px;border-radius:6px}
+.paper p{font-family:"Playfair Display",serif;font-size:clamp(19px,2.2vw,23px);line-height:1.55;margin-inline:auto}
+.sign{font-family:"Dancing Script",cursive;font-size:32px;color:var(--hi)}
+.how .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px;margin-top:30px}
+.card{background:var(--card);border-radius:14px;padding:26px;box-shadow:0 8px 28px rgba(80,10,10,.08);border:1px solid color-mix(in srgb,var(--gold) 25%,transparent)}
+.card .n{font:700 40px "Playfair Display",serif;color:var(--gold);line-height:1;margin-bottom:10px}
+.card p{color:var(--muted);margin:0}
+.advent{background:var(--green);color:#f3eadb}
+.advent p{color:#d9cdb9}
+.doors{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px;margin-top:30px}
+.door{min-height:132px;border-radius:12px;border:1px solid color-mix(in srgb,var(--gold) 55%,transparent);background:linear-gradient(160deg,#25472f,#163223);color:var(--gold);cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;padding:12px;transition:background .3s,transform .2s;font-family:Jost,sans-serif;text-align:center}
+.door:hover{transform:translateY(-3px)}
+.door .d{font:700 34px "Playfair Display",serif;line-height:1}
+.door .m{font-size:13px;letter-spacing:.02em;color:#d9cdb9}
+.door .t{display:none;font:700 16px/1.2 "Playfair Display",serif;color:#2a1212}
+.door .l{display:none;font-size:13px;line-height:1.35;color:#3d2a20}
+.door.open{background:var(--gold)}
+.door.open .d{font-size:18px;color:#6e0a0d}.door.open .m{display:none}.door.open .t,.door.open .l{display:block}
+.door.today{box-shadow:0 0 0 3px #fff4e0}
+.door.last{background:linear-gradient(160deg,#b3191d,#7d0c0f);grid-column:1/-1}.door.last.open{background:var(--gold)}
+.row{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px}
+.ghost2{border:1.5px solid color-mix(in srgb,var(--gold) 70%,transparent);color:#f3eadb;background:transparent}
+.inside .pages{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(14px,2.5vw,28px);margin-top:32px}
+.inside figure{margin:0}
+.inside img{border-radius:6px;box-shadow:0 14px 34px rgba(60,10,10,.25);aspect-ratio:612/810;object-fit:cover;width:100%}
+.inside figcaption{font-size:15px;color:var(--muted);margin-top:12px;text-align:center}
+.digital{background:var(--red2);color:#fbecd6}
+.digital p{color:#ecd5c3}
+.reader{display:grid;grid-template-columns:minmax(0,360px) minmax(0,1fr);gap:clamp(24px,4vw,56px);align-items:center;margin-top:30px;background:rgba(0,0,0,.18);border:1px solid color-mix(in srgb,var(--gold) 45%,transparent);border-radius:18px;padding:clamp(18px,3vw,36px)}
+.reader img{border-radius:8px;box-shadow:0 16px 36px rgba(0,0,0,.45);aspect-ratio:612/810;object-fit:cover;width:100%}
+.mode{display:inline-flex;border:1px solid var(--gold);border-radius:999px;padding:4px;gap:4px;margin:6px 0 20px}
+.mode button{min-height:42px;padding:0 20px;border:0;border-radius:999px;background:transparent;color:#fbecd6;font:500 15px Jost,sans-serif;cursor:pointer}
+.mode button[aria-pressed=true]{background:var(--gold);color:#2a1212}
+.mode button:focus-visible,.play:focus-visible,.pick button:focus-visible{outline:3px solid #fff4e0;outline-offset:2px}
+.player{display:flex;align-items:center;gap:14px;background:rgba(255,255,255,.08);border-radius:14px;padding:14px 16px;margin-bottom:12px}
+.play{flex:none;width:52px;height:52px;border-radius:50%;border:0;background:var(--gold);color:#2a1212;cursor:pointer;display:grid;place-items:center}
+.wave{flex:1;display:flex;align-items:center;gap:3px;height:36px}
+.wave i{flex:1;background:color-mix(in srgb,var(--gold) 55%,transparent);border-radius:2px}
+.pnote{font-size:14px;color:#e9cfa0;min-height:1.5em}
+.pick{display:flex;flex-wrap:wrap;gap:6px;margin-top:18px}
+.pick button{width:40px;height:40px;border-radius:8px;border:1px solid color-mix(in srgb,var(--gold) 45%,transparent);background:transparent;color:#d9c2b2;font:500 14px Jost,sans-serif;cursor:pointer}
+.pick button.on{background:var(--gold);color:#2a1212;border-color:var(--gold)}
+.pick button.lock{opacity:.45}
+.reader.readmode .player,.reader.readmode .pnote{display:none}
+@media(max-width:760px){.reader{grid-template-columns:minmax(0,1fr)}.reader img{max-width:300px;margin:0 auto}}
+.gift{background:var(--gold-soft)}
+.gift .wrap{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:40px;align-items:center}
+.gift ul{padding:0;margin:0 0 24px;list-style:none}
+.gift li{padding:10px 0 10px 34px;position:relative;border-bottom:1px solid color-mix(in srgb,var(--gold) 40%,transparent)}
+.gift li::before{content:"";position:absolute;left:4px;top:17px;width:14px;height:14px;background:var(--red);clip-path:polygon(50% 0,61% 39%,100% 50%,61% 61%,50% 100%,39% 61%,0 50%,39% 39%)}
+.specs{width:100%;border-collapse:collapse;font-size:15px;background:var(--card);border-radius:12px;overflow:hidden}
+.specs td{padding:11px 16px;border-bottom:1px solid color-mix(in srgb,var(--gold) 30%,transparent)}
+.specs td:first-child{color:var(--muted);width:42%}
+.specs td:last-child{font-weight:500;white-space:nowrap}
+.author .wrap{display:grid;grid-template-columns:minmax(0,260px) minmax(0,1fr);gap:clamp(28px,5vw,64px);align-items:center}
+.portrait{aspect-ratio:4/5;border-radius:16px;background:linear-gradient(160deg,var(--red),var(--red2));display:grid;place-items:center;color:var(--gold);font:500 64px "Playfair Display",serif;box-shadow:0 14px 34px rgba(80,10,10,.25)}
+.tag{font-family:"Playfair Display",serif;font-style:italic;font-size:21px;color:var(--hi)}
+.note{font-size:14px;opacity:.75}
+.news{background:var(--red);color:#fbecd6;text-align:center}
+.news p{margin-inline:auto;opacity:.9}
+form{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:22px}
+input{min-height:48px;width:min(340px,100%);border-radius:999px;border:1px solid color-mix(in srgb,var(--gold) 60%,transparent);background:rgba(255,255,255,.1);color:#fff;padding:0 20px;font:16px Jost,sans-serif}
+input::placeholder{color:#f1d9c7}
+.thanks{margin-top:16px;color:var(--gold);min-height:1.6em}
+footer{background:var(--red2);color:#e8d3c2;font-size:14px;padding:28px max(5vw,16px)}
+footer .wrap{display:flex;flex-wrap:wrap;gap:10px 24px;justify-content:space-between}
+@media(max-width:760px){.hero .wrap,.author .wrap,.gift .wrap{grid-template-columns:minmax(0,1fr)}.book{order:-1;width:min(300px,80%)}.portrait{max-width:220px}.inside .pages{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.inside figure:nth-child(2){display:none}}
+@media(max-width:600px){.doors{grid-template-columns:repeat(2,minmax(0,1fr))}.door{min-height:112px}nav{position:static}nav .wrap{flex-direction:column;align-items:stretch;gap:0;padding:6px 16px 0}nav .name{font-size:19px;text-align:center;margin:0}nav .links{flex-wrap:nowrap;overflow-x:auto;justify-content:space-between;gap:0 14px;font-size:14px;scrollbar-width:none}nav .links a{flex:none;padding:10px 0 12px}.hero svg.stars{opacity:.25}.cta .btn{flex:1 1 200px}}
+</style>
+</head>
+<body>
+<div class="draft">Draft website preview prepared for Ana Maria Tomoiaga</div>
+<nav><div class="wrap">
+  <a class="name" href="#top">Ana Maria Tomoiaga</a>
+  <div class="links"><a href="#days">25 Days</a><a href="#book">The Book</a><a href="#inside">Look Inside</a><a href="#gift">Gifting</a><a href="#author">About</a></div>
+</div></nav>
+
+<header class="band hero" id="top">
+  <svg class="stars" aria-hidden="true"><defs><path id="s" d="M0-10L2.4-2.4 10 0 2.4 2.4 0 10-2.4 2.4-10 0-2.4-2.4Z" fill="#e0b65f"/></defs>
+    <use href="#s" x="8%" y="14%"/><use href="#s" x="22%" y="84%"/><use href="#s" x="46%" y="10%"/><use href="#s" x="56%" y="90%"/><use href="#s" x="92%" y="18%"/><use href="#s" x="88%" y="78%"/><use href="#s" x="4%" y="56%"/><use href="#s" x="40%" y="62%"/></svg>
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">Second Edition · Hardcover keepsake</div>
+      <h1>25 Days of Christmas Magic</h1>
+      <p class="lead">A Christmas devotional and coffee table keepsake. Twenty-five days of light, love and reflection from December 1st to Christmas morning, with pages left for your own story.</p>
+      <div class="cta">
+        <a class="btn gold" href="https://www.amazon.com/dp/B0HNG5FXK2" target="_blank" rel="noopener">Buy on Amazon</a>
+        <a class="btn ghost" href="#days">See the 25 days</a>
+      </div>
+      <p class="meta">By Ana Maria Tomoiaga, creator, storyteller and believer in everyday magic</p>
+    </div>
+    <div class="book"><img src="cover.jpg" alt="Cover of 25 Days of Christmas Magic, a red and gold hardcover with a Christmas tree and gifts" width="720" height="950"></div>
+  </div>
+</header>
+
+<section class="band letter" id="book">
+  <div class="paper">
+    <div class="eyebrow">A note from Ana</div>
+    <p>This book was made to be your companion through the season: a gentle pause each day, a small spark of magic, and a reminder that love is always near.</p>
+    <p>And when you reach the last page, the book becomes yours, a place to keep your memories and the words of the people you love.</p>
+    <div class="sign">With love, Ana Maria</div>
+  </div>
+</section>
+
+<section class="band how"><div class="wrap">
+  <h2>How the book works</h2>
+  <p>One page a day through December, then a home for your family's Christmas memories.</p>
+  <div class="grid">
+    <div class="card"><div class="n">25</div><h3>Daily devotions</h3><p>Each day opens with a title and a short inspiring line, followed by a heartfelt reflection.</p></div>
+    <div class="card"><div class="n">25</div><h3>Seasonal photographs</h3><p>Every reflection sits beside a full-page holiday image to slow down and enjoy.</p></div>
+    <div class="card"><div class="n">28</div><h3>Pages for your story</h3><p>"A Corner of Your Christmas Story": framed pages to write your thoughts, prayers and memories.</p></div>
+    <div class="card"><div class="n">∞</div><h3>Shared with family</h3><p>Invite children, partners and friends to write too, and open it again every Christmas.</p></div>
+  </div>
+</div></section>
+
+<section class="band advent" id="days"><div class="wrap">
+  <h2>Open a little magic every day</h2>
+  <p>From the Season of Light on December 1st to the Morning of Light on Christmas Day. Tap a door to see that day's theme.</p>
+  <div class="row"><button class="btn ghost2" id="openAll" type="button">Open all doors</button></div>
+  <div class="doors" id="doors"></div>
+</div></section>
+
+<section class="band inside center" id="inside"><div class="wrap">
+  <h2>Look inside</h2>
+  <p>Rich red pages with gold ornamental frames, written to be read slowly by the tree.</p>
+  <div class="pages">
+    <figure><img src="page-day1.jpg" alt="Sample page: December 1, The Season of Light" width="765" height="1013"><figcaption>December 1: The Season of Light</figcaption></figure>
+    <figure><img src="page-photo.jpg" alt="Sample full-page photograph of a street glowing with Christmas lights" width="765" height="1013"><figcaption>A full-page photograph for every day</figcaption></figure>
+    <figure><img src="page-story.jpg" alt="Sample page: A Corner of Your Christmas Story" width="765" height="1013"><figcaption>A Corner of Your Christmas Story</figcaption></figure>
+  </div>
+</div></section>
+
+<section class="band gift" id="gift"><div class="wrap">
+  <div>
+    <h2>A gift that becomes a family treasure</h2>
+    <ul>
+      <li>For mothers, daughters and grandparents</li>
+      <li>For families who count down to Christmas together</li>
+      <li>For friends who deserve something more meaningful than a gift card</li>
+      <li>Beautiful on display, meaningful enough to revisit year after year</li>
+    </ul>
+    <a class="btn gold" href="https://www.amazon.com/dp/B0HNG5FXK2" target="_blank" rel="noopener">Order your copy on Amazon</a>
+  </div>
+  <table class="specs">
+    <tr><td>Format</td><td>Hardcover</td></tr>
+    <tr><td>Edition</td><td>Second Edition</td></tr>
+    <tr><td>Pages</td><td>82</td></tr>
+    <tr><td>Size</td><td>8.5 × 11 in</td></tr>
+    <tr><td>Published</td><td>October 18, 2026</td></tr>
+    <tr><td>ISBN-13</td><td>979-8163150281</td></tr>
+  </table>
+</div></section>
+
+<section class="band author" id="author"><div class="wrap">
+  <div class="portrait" aria-label="Author photo placeholder">AM</div>
+  <div>
+    <h2>Meet Ana Maria Tomoiaga</h2>
+    <p class="tag">Creator, storyteller and believer in everyday magic</p>
+    <p>Ana Maria writes to remind readers that wonder is never far away. With 25 Days of Christmas Magic she has created a devotional keepsake that turns the countdown to Christmas into a season of faith, reflection and family connection.</p>
+    <p class="note">Draft note: author photo and full biography will be added here.</p>
+  </div>
+</div></section>
+
+<section class="band news" id="news"><div class="wrap">
+  <h2>Join the Christmas magic list</h2>
+  <p>Seasonal inspiration, new release news and special offers from Ana Maria, straight to your inbox.</p>
+  <form id="f"><input type="email" id="email" required placeholder="Your email address" aria-label="Email address"><button class="btn gold" type="submit">Subscribe</button></form>
+  <div class="thanks" id="thanks" aria-live="polite"></div>
+</div></section>
+
+<footer><div class="wrap">
+  <span>© 2026 Ana Maria Tomoiaga. All rights reserved.</span>
+  <span>Website draft by Mustafijur R.</span>
+</div></footer>
+
+<script>
+{
+  /* EDIT HERE: the 25 days, [title, short line shown when the door opens] */
+  const days=[
+    ['The Season of Light','Be a light for someone this season.'],
+    ['The Gift of Connection','The best gifts are presence and attention.'],
+    ['The Sound of Stillness','Slow down and let peace find you.'],
+    ['The Magic of Giving','Love multiplies when it is shared.'],
+    ['Believing Again','Dare to believe in goodness again.'],
+    ['Coming Home','Home is wherever you are loved.'],
+    ['The Quiet Kind of Love','Notice the love that simply stays.'],
+    ['Letting Go Gracefully','Making room for what comes next.'],
+    ['The Beauty of Tradition','The rituals that bind generations.'],
+    ['The Meaning of Magic','Wonder hidden in ordinary moments.'],
+    ['The Art of Forgiveness','Lighten the heart before the new year.'],
+    ['The Return of Hope','Hope always finds its way back.'],
+    ['The Beauty of Renewal','Every season offers a fresh start.'],
+    ['The Joy in Small Things','Little moments, the biggest joy.'],
+    ['Faith in the Unseen','Trusting what the heart already knows.'],
+    ['Where Hearts Gather','The table, the people, the stories.'],
+    ['The Comfort of Laughter','Laughter is a gift we give each other.'],
+    ['The Spirit of Generosity','Giving with an open heart.'],
+    ['The Light We Carry','The warmth we bring into every room.'],
+    ['The Magic of Today','Be fully present, right now.'],
+    ['The Whisper of Grace','Gentle grace on the busiest days.'],
+    ['The Heart of Gratitude','Counting the blessings already here.'],
+    ['The Joy of Love','Love is the heart of Christmas.'],
+    ['The Eve of Wonder','The hush and glow of Christmas Eve.'],
+    ['The Morning of Light','Christmas morning arrives.']
+  ];
+  const now=new Date(),today=now.getMonth()===11?now.getDate():0;
+  const doors=document.getElementById('doors');
+  doors.innerHTML=days.map(([t,l],i)=>`<button class="door${i===24?' last':''}${i+1===today?' today':''}" type="button" aria-expanded="false" aria-label="December ${i+1}: ${t}"><span class="d">${i+1}</span><span class="m">${i+1===today?'Today':'December'}</span><span class="t">${t}</span><span class="l">${l}</span></button>`).join('');
+  const set=(d,o)=>{d.classList.toggle('open',o);d.setAttribute('aria-expanded',o)};
+  doors.addEventListener('click',e=>{const d=e.target.closest('.door');if(d)set(d,!d.classList.contains('open'))});
+  const all=document.getElementById('openAll');let open=false;
+  all.addEventListener('click',()=>{open=!open;doors.querySelectorAll('.door').forEach(d=>set(d,open));all.textContent=open?'Close all doors':'Open all doors'});
+  document.getElementById('f').addEventListener('submit',e=>{
+    e.preventDefault();
+    document.getElementById('thanks').textContent='Thank you! On the live website, this will add you to Ana Maria’s mailing list.';
+    document.getElementById('email').value='';
+  });
+}
+</script>
+</body>
+</html>
